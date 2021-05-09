@@ -1,5 +1,5 @@
 {% set name = "sid-dev" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sid_dev/sid_dev-{{ version }}.tar.gz
-  sha256: 6920749cc2f8a1980a7e3b91d637c0190e1e48cecf425a0f2c1856528ade1f2a
+  sha256: f5c31b7bd3d134a54aa6ffe603c01894a5e2d9efd1a4a850e3a1dc604d5031ca
 
 build:
   number: 0
@@ -23,6 +23,8 @@ requirements:
     - bokeh
     - dask
     - fastparquet
+    - holoviews
+    - matplotlib
     - numba >=0.48
     - numpy
     - pandas >=1
