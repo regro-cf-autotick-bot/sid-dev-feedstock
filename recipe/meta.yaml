@@ -11,7 +11,7 @@ source:
   sha256: f5c31b7bd3d134a54aa6ffe603c01894a5e2d9efd1a4a850e3a1dc604d5031ca
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -24,7 +24,7 @@ requirements:
     - dask
     - fastparquet
     - holoviews
-    - matplotlib
+    - matplotlib-base
     - numba >=0.48
     - numpy
     - pandas >=1
