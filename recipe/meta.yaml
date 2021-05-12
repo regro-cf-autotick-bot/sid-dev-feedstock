@@ -1,5 +1,5 @@
 {% set name = "sid-dev" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sid_dev/sid_dev-{{ version }}.tar.gz
-  sha256: 7561699f3d7fe5b38f1457ea429684ace5fcbd37f627b1612813e870229480ad
+  sha256: e4726916922bcf3fec57b9981555041e77557e1199645da082dad7def1fefdab
 
 build:
   number: 0
