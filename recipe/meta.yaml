@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/sid_dev/sid_dev-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/sid_dev/sid_dev-{{ version }}.tar.gz
   sha256: 621d4f7c0d55a0c5d1c0c93ece9a883bbdd89f37c9733ba9f3b6de93616c05a5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - bokeh
     - dask
@@ -28,7 +28,7 @@ requirements:
     - numba >=0.48
     - numpy
     - pandas >=1
-    - python >=3.6
+    - python >={{ python_min }}
     - python-snappy
     - seaborn
     - tqdm
@@ -40,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/covid-19-impact-lab/sid
